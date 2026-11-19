@@ -32,18 +32,12 @@ contact_notebook/
 │   ├── day2/
 │   └── day3/
 ├── src/
-│   ├── models/
-│   ├── validation/
-│   ├── services/
-│   └── MainDemo.kt 
 ├── test/
 ├── gitignore
 └── README.md
 ```
 
 ## Запуск проверки ядра (день 3)
-
-В **Android Studio**: открыть `src/MainDemo.kt` → Run → Run 'MainDemo'.
 
 ## План по дням
 
