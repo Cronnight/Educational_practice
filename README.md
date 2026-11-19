@@ -32,6 +32,10 @@ contact_notebook/
 │   ├── day2/
 │   └── day3/
 ├── src/
+│   ├── models/
+│   ├── validation/
+│   ├── services/
+│   └── MainDemo.kt
 ├── test/
 ├── gitignore
 └── README.md
