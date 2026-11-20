@@ -10,16 +10,15 @@
 - Создание, просмотр, редактирование и удаление контактов
 - Поиск по имени, фамилии, телефону
 - Валидация данных (имя, телефон)
-- Локальное хранение в SQLite (дни 4–5)
-- Импорт и экспорт в CSV (дни 4–5)
+- Локальное хранение в CSV
+- Импорт и экспорт в CSV
 
 ## Стек
 
 - Язык: Kotlin  
 - Среда разработки: Android Studio  
 - Платформа: Android  
-- БД: SQLite (с дня 4)  
-- Файлы: работа с файлами CSV на Kotlin (с дня 4–5)  
+- Хранение: CSV, SQLite планируется при переходе на Android  
 - Контроль версий: Git  
 
 ## Структура репозитория
@@ -27,21 +26,42 @@
 ```
 contact_notebook/
 ├── assets/
+├── data/
 ├── docs/
 │   ├── day1/
 │   ├── day2/
-│   └── day3/
+│   ├── day3/
+│   ├── day4/
+│       └── integration.md
+|   └── day5/
+│       └── error_handling.md
 ├── src/
 │   ├── models/
+│   │   └── Contact.kt
 │   ├── validation/
+│   │   └── ContactValidator.kt
 │   ├── services/
+│   │   └── ContactService.kt
+│   ├── data/
+│   │   ├── ContactRepository.kt
+│   │   └── CsvContactRepository.kt
 │   └── MainDemo.kt
 ├── test/
-├── gitignore
+├── .gitignore
 └── README.md
 ```
 
-## Запуск проверки ядра (день 3)
+## Запуск проверки (дни 4–5)
+
+1. Открыть проект в Android Studio.
+2. Запустить `src/MainDemo.kt`.
+3. В консоли появятся строки `[OK]` / `[FAIL]`.
+
+Проверяются:
+- валидация и CRUD;
+- сохранение в CSV;
+- загрузка после «перезапуска»;
+- обработка ошибок.
 
 ## План по дням
 
@@ -49,7 +69,7 @@ contact_notebook/
 |------|------|
 | 1–2  | Планирование, ТЗ, WBS, Git |
 | 3    | Архитектура + ядро на Kotlin |
-| 4–5  | SQLite + CSV |
+| 4–5  | Слой данных: CSV |
 | 6    | UI в Android Studio |
 | 7    | Тесты |
 | 8    | Документация и защита |
