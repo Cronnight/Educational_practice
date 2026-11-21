@@ -34,7 +34,8 @@ contact_notebook/
 │   ├── day4/
 │       └── integration.md
 |   └── day5/
-│       └── error_handling.md
+│       ├── error_handling.md
+|       └── MainDemo.kt
 ├── src/
 │   ├── models/
 │   │   └── Contact.kt
@@ -42,10 +43,9 @@ contact_notebook/
 │   │   └── ContactValidator.kt
 │   ├── services/
 │   │   └── ContactService.kt
-│   ├── data/
-│   │   ├── ContactRepository.kt
-│   │   └── CsvContactRepository.kt
-│   └── MainDemo.kt
+│   └── data/
+│       ├── ContactRepository.kt
+│       └── CsvContactRepository.kt
 ├── test/
 ├── .gitignore
 └── README.md
