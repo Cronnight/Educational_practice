@@ -73,7 +73,6 @@ class CsvContactRepository(
         val lines = file.readLines(StandardCharsets.UTF_8)
         if (lines.isEmpty()) return emptyList()
 
-        // пропускаем заголовок, если он есть
         val dataLines = if (lines.first().startsWith("id;")) {
             lines.drop(1)
         } else {
@@ -124,7 +123,6 @@ class CsvContactRepository(
             for (c in contacts) {
                 val last = c.lastName ?: ""
                 val note = c.note ?: ""
-                // экранируем ; и переносы строк в полях
                 val safeFirst = escape(c.firstName)
                 val safeLast = escape(last)
                 val safePhone = escape(c.phone)
